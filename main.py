@@ -280,10 +280,10 @@ def onmessage(update,bot:ObigramClient):
                 user_info = jdb.get_user(username)
                 jdb.save()
         else:
-            mensaje = "Usted no tiene acceso.\nPor favor Contacta con mi Programador @"+"Abolanos3"+"/n"
+            mensaje = "Usted no tiene acceso.\nPor favor Contacta con mi Programador @"+"@nautaii"+"/n"
             intento_msg = "💢El usuario @"+username+ " ha intentando usar el bot sin permiso💢"
             bot.sendMessage(update.message.chat.id,mensaje)
-            bot.sendMessage(-1001567783299,intento_msg)
+            bot.sendMessage(1759969205,intento_msg)
             return
 
 
@@ -594,9 +594,9 @@ def onmessage(update,bot:ObigramClient):
         elif '/uclv' in msgText:
             getUser = user_info
             getUser['moodle_host'] = "https://moodle.uclv.edu.cu/"
-            getUser['uploadtype'] =  "calendario"
-            getUser['moodle_user'] = "--"
-            getUser['moodle_password'] = "--"
+            getUser['uploadtype'] =  "calendar"
+            getUser['moodle_user'] = "brrgarcia"
+            getUser['moodle_password'] = "lukas12345+"
             getUser['moodle_repo_id'] = 4
             getUser['zips'] = 398
             jdb.save_data_user(username,getUser)
