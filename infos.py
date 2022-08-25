@@ -67,7 +67,7 @@ def createFileMsg(filename,files):
             url = urllib.parse.unquote(f['directurl'],encoding='utf-8', errors='replace')
             #msg+= '<a href="'+f['url']+'">🔗' + f['name'] + '🔗</a>'
             msg+= "<a href='"+url+"'>➾"+f['name']+'</a>\n'
-        msg += "\n⚡️¡Somos Ultra_FAST, siempre su mejor opción!⚡️\n\n"
+        msg += "\n⚡️¡Somos ⚜️FREE DOWNLOAD ⚜️, siempre su mejor opción!⚡️\n\n"
         return msg
     return ''
 
