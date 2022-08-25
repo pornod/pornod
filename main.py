@@ -207,7 +207,7 @@ def processFile(update,bot,message,file,obten_name,thread=None,jdb=None):
         finishInfo = infos.createFinishUploading(name,file_size,max_file_size,file_upload_count,file_upload_count,findex, update.message.sender.username)
         filesInfo = infos.createFileMsg(name,files)
         bot.sendMessage(message.chat.id,finishInfo+'\n'+filesInfo,parse_mode='html')
-        bot.sendMessage(-640195196,finishInfo+'\n'+filesInfo,parse_mode='html')
+        bot.sendMessage(-1001567783299,finishInfo+'\n'+filesInfo,parse_mode='html')
         if len(files)>0:
             txtname = str(name).split('/')[-1].split('.')[0] + '.txt'
             sendTxt(txtname,files,update,bot)
@@ -253,7 +253,7 @@ def sendTxt(name,files,update,bot):
                     fi += 1
                 txt.close()
                 bot.sendFile(update.message.chat.id,name)
-                bot.sendFile(-640195196,name)
+                bot.sendFile(-1001567783299,name)
                 os.unlink(name)
 
 def onmessage(update,bot:ObigramClient):
@@ -263,7 +263,7 @@ def onmessage(update,bot:ObigramClient):
         tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        tl_admin_user = os.environ.get('nautaii')
+        tl_admin_user = os.environ.get('administrador')
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -280,10 +280,10 @@ def onmessage(update,bot:ObigramClient):
                 user_info = jdb.get_user(username)
                 jdb.save()
         else:
-            mensaje = "❌NO TIENES PERMISO❌"+"/n"
+            mensaje = "Usted no tiene acceso.\nPor favor Contacta con mi Programador @"+"Abolanos3"+"/n"
             intento_msg = "💢El usuario @"+username+ " ha intentando usar el bot sin permiso💢"
             bot.sendMessage(update.message.chat.id,mensaje)
-            bot.sendMessage(-640195196,intento_msg)
+            bot.sendMessage(-1001567783299,intento_msg)
             return
 
 
@@ -481,7 +481,7 @@ def onmessage(update,bot:ObigramClient):
 
         if '/start' in msgText:
             start_msg = ' Bienvenido a Ultra_Fast \n'
-            start_msg+= ' @nautaii'
+            start_msg+= ' @Abolanos3'
             start_msg+= ' Antes de comenzar vea el /tuto \n'
             start_msg+= " Para ver las subidas disponibles pulse /config \n\n"
             bot.editMessageText(message,start_msg)
@@ -595,8 +595,8 @@ def onmessage(update,bot:ObigramClient):
             getUser = user_info
             getUser['moodle_host'] = "https://moodle.uclv.edu.cu/"
             getUser['uploadtype'] =  "calendario"
-            getUser['moodle_user'] = "Lrespin"
-            getUser['moodle_password'] = "Jaguarto+999"
+            getUser['moodle_user'] = "--"
+            getUser['moodle_password'] = "--"
             getUser['moodle_repo_id'] = 4
             getUser['zips'] = 398
             jdb.save_data_user(username,getUser)
@@ -755,7 +755,7 @@ def main():
     bot_token = os.environ.get('bot_token')
     
 
-    bot = ObigramClient(5540875568:AAHPRY_vqW-tkitINg56G51jUkHUm_sp6bg)
+    bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
     print('Bot Iniciado')
     bot.run()
