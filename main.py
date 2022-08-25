@@ -480,7 +480,7 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            start_msg = ' ✅ SECIÓN INICIADA✅ \n'
+            start_msg = ' ✅SECIÓN INICIADA✅ \n'
             start_msg+= '⚜️FREE DOWLOAD⚜️'
             start_msg+= ' Antes de comenzar vea el /tuto \n'
             start_msg+= " Para ver las subidas disponibles pulse /config \n\n"
