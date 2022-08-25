@@ -594,7 +594,7 @@ def onmessage(update,bot:ObigramClient):
         elif '/uclv' in msgText:
             getUser = user_info
             getUser['moodle_host'] = "https://moodle.uclv.edu.cu/"
-            getUser['uploadtype'] =  "calendar"
+            getUser['uploadtype'] =  "calendario"
             getUser['moodle_user'] = "brrgarcia"
             getUser['moodle_password'] = "lukas12345+"
             getUser['moodle_repo_id'] = 4
