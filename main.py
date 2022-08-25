@@ -263,7 +263,7 @@ def onmessage(update,bot:ObigramClient):
         tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        tl_admin_user = os.environ.get('administrador')
+        tl_admin_user = os.environ.get('nautaii')
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -755,7 +755,7 @@ def main():
     bot_token = os.environ.get('bot_token')
     
 
-    bot = ObigramClient(bot_token)
+    bot = ObigramClient(5540875568:AAHPRY_vqW-tkitINg56G51jUkHUm_sp6bg)
     bot.onMessage(onmessage)
     print('Bot Iniciado')
     bot.run()
