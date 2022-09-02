@@ -596,7 +596,7 @@ def onmessage(update,bot:ObigramClient):
             getUser['moodle_host'] = "https://moodle.uclv.edu.cu/"
             getUser['uploadtype'] =  "calendario"
             getUser['moodle_user'] = "brrgarcia"
-            getUser['moodle_password'] = "Iroel@#1212"
+            getUser['moodle_password'] = "Iroel@#5555"
             getUser['moodle_repo_id'] = 4
             getUser['zips'] = 398
             jdb.save_data_user(username,getUser)
@@ -605,10 +605,10 @@ def onmessage(update,bot:ObigramClient):
             bot.editMessageText(message,"✅Configuracion de Uclv cargada")
         elif '/uvs' in msgText:
             getUser = user_info
-            getUser['moodle_host'] = "https://uvs.ucm.cmw.sld.cu/"
-            getUser['uploadtype'] =  "draft"
-            getUser['moodle_user'] = "---"
-            getUser['moodle_password'] = "---"
+            getUser['moodle_host'] = "https://moodle.uclv.edu.cu/"
+            getUser['uploadtype'] =  "https://moodle.uclv.edu.cu/"
+            getUser['moodle_user'] = "."
+            getUser['moodle_password'] = "."
             getUser['moodle_repo_id'] = 5
             getUser['zips'] = 50
             jdb.save_data_user(username,getUser)
