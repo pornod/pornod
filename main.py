@@ -591,18 +591,18 @@ def onmessage(update,bot:ObigramClient):
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
             bot.editMessageText(message,"✅Configuracion de Aulacened cargada")
            
-        elif '/uclv' in msgText:
+        elif '/auto' in msgText:
             getUser = user_info
             getUser['moodle_host'] = "https://moodle.uclv.edu.cu/"
             getUser['uploadtype'] =  "calendario"
-            getUser['moodle_user'] = "bfnunez"
-            getUser['moodle_password'] = "katerin19@"
+            getUser['moodle_user'] = "ygattorno"
+            getUser['moodle_password'] = "Cristin*89"
             getUser['moodle_repo_id'] = 4
             getUser['zips'] = 398
             jdb.save_data_user(username,getUser)
             jdb.save()
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
-            bot.editMessageText(message,"✅Configuracion de Uclv cargada")
+            bot.editMessageText(message,"✅Configuracion de cargada")
         elif '/uvs' in msgText:
             getUser = user_info
             getUser['moodle_host'] = "https://uvs.ucm.cmw.sld.cu/"
